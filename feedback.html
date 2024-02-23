@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Feedback</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>User Feedback</h1>
+
+    <!-- Website Feedback Section -->
+    <div class="feedback-section">
+        <h2>Website Feedback</h2>
+        <button onclick="openModal('websiteModal')">Click here to provide feedback</button>
+        <div id="websiteModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('websiteModal')">Close</span>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfaPntBi82yxyVIRJL8y3ZtXZ5pGB7OzPNIyK9iiDvP6vSPPg/viewform?embedded=true" width="640" height="773" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>032499
+            </div>
+        </div>
+    </div>
+
+    <!-- Sustainable Waste Management Ideas Section -->
+    <div class="feedback-section">
+        <h2>Sustainable Waste Management Ideas</h2>
+        <button onclick="openModal('wasteModal')">Click here to submit ideas</button>
+        <div id="wasteModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('wasteModal')">Close</span>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfJAO7U71E8XjGcMFSSIWITrTyClVHqLMBDnd52m4_PU3I3EA/viewform?embedded=true" width="640" height="642" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

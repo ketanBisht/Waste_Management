@@ -10,7 +10,16 @@ p {
   text-align: justify;
 }
 
-.seg_headings{
+.seg_headings {
   font-size: larger;
   font-weight: bold
+}
+
+
+.guide-content {
+  padding-top: 9vw;
+}
+
+.page{
+  padding: 1.5vw 5vw;
 }

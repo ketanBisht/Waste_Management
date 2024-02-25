@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %} {% endblock %}</title>
+  <link rel="stylesheet" href="../static/css/bootstrap.css" />
+  <link rel="stylesheet" href="{{ url_for ('static', filename='css/base.css') }}" />
+  {% block css %} {% endblock %}
+</head>
+
+<body>
+  <nav class="glass-container">
+    <div id="logo-div" class="logo-div">
+      <span>
+        <a href="/">
+          <img class="logo" src="{{ url_for('static', filename='images/logo.svg') }}" alt="">
+        </a>
+      </span>
+    </div>
+    <div id="nav-links-div" class="nav-links-div">
+      <ul id="nav-links" class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/guide">Segregation Guide</a></li>
+        <li><a href="/dump-zone">Dumping Zone</a></li>
+        <li><a href="/vehicle-support">Vehicle Support</a></li>
+        <li><a href="/binify-bot">Binify.bot</a></li>
+        <li><a href="/ai-waste-classifier">EcoSort.ai</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  {% block body %} {% endblock %}
+
+  <!-- ----------------------------- BINIFY-BOT ------------------------------ -->
+  <script src="https://www.chatbase.co/embed.min.js" chatbotId="imtdmI2Djvb6EuHrbBTPR" domain="www.chatbase.co" defer>
+  </script>
+
+  {% block js %} {% endblock %}
+  <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+
+</html>
